@@ -31,26 +31,29 @@ a{
 
 .normal{
   text-align: left;
-  font-size: 36;
+  font-size: 150%;
   font-family: 'Times New Roman', Times, serif;
-  color: black
+  color: black;
 }
 
 .leftbutton{
   display: inline-block;
   text-align: left;
+  font-size: 150%;
 }
 
 .rightbutton{
   display: inline-block;
   position: absolute;
   left: 10%;
+  font-size: 150%;
 }
 
 .hidebutton{
   display: inline-block;
   position: absolute;
-  left: 50%;
+  left: 65%;
+  font-size: 150%;
 }
 
 .anyway{
@@ -62,6 +65,7 @@ a{
   animation-duration: 20s;
   animation-timing-function: linear;
   animation-iteration-count: 1;
+  font-size: 150%;
 }
 
 @keyframes corrupt {
@@ -119,22 +123,27 @@ a{
 
 .lovedhim{
   text-align: left;
-  font-size: 36;
+  font-size: 150%;
   font-family: 'Times New Roman', Times, serif;
   color: rgb(255, 255, 255)
 }
 
 .leftbuttonl{
-  display: inline-block;
   text-align: left;
+  display: inline-block;
+  position: absolute;
+  top: 90%;
   color: white;
+  font-size: 150%;
 }
 
 .rightbuttonl{
   display: inline-block;
   position: absolute;
-  left: 10%;
+  left: 15%;
+  top: 90%;
   color: white;
+  font-size: 150%;
 }
 
 .andrew{
@@ -142,5 +151,44 @@ a{
   font-size: 36;
   font-weight: 1;
   font-family: 'Times New Roman', Times, serif;
-  color: black;
+  color: rgb(110, 110, 110);
+  font-size: 150%;
+  animation:emerge;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  font-size: 150%;
+}
+
+@keyframes emerge {
+  0% {
+      opacity: 0%;
+  }
+
+  100% {
+      opacity: 100%
+  }
+}
+
+.andrewdot{
+  display: inline-block;
+  text-align: left;
+  font-size: 150%;
+  animation:emergedot;
+  animation-duration: 7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  font-size: 150%;
+}
+
+@keyframes emergedot {
+  0% {
+      opacity: 0%;
+  }
+  70%{
+      opacity: 0%;
+  }
+  100% {
+      opacity: 100%
+  }
 }
