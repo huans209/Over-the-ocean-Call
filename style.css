@@ -1,15 +1,146 @@
-/* body{
-  background-image: linear-gradient(to bottom, lightcyan, skyblue, cornflowerblue);
+a{
+  text-decoration: none;
+}
+
+.bgindex {
+  background: linear-gradient(to bottom,white, lightcyan, skyblue, cornflowerblue);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
 }
 
 .introcall{
+  display: inline-block;
+  position: absolute;
+  width: 100vw;
+  top: 55%;
   text-align: center;
   color: white;
-  margin-top: 60%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.btnenter{
+  display: inline-block;
+  position: absolute;
+  width: 100vw;
+  top: 82%;
+  text-align: center;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.normal{
+  text-align: left;
+  font-size: 36;
+  font-family: 'Times New Roman', Times, serif;
+  color: black
+}
+
+.leftbutton{
+  display: inline-block;
+  text-align: left;
+}
+
+.rightbutton{
+  display: inline-block;
+  position: absolute;
+  left: 10%;
+}
+
+.hidebutton{
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+}
+
+.anyway{
+  text-align: left;
+  font-size: 36;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  animation:corrupt;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes corrupt {
+  0% {
+      color: black;
+      transform: scale(1,1) translateX(0px);
+  }
+  25%{
+      color: gray;
+      transform: scale(1.25,1) translateX(170px);
+  }
+  50%{
+      color: gray;
+      transform: scale(1.75,1) translateX(400px);
+}
+  100% {
+      color: red;
+      transform: scale(3,1) translateX(750px);
+  }
+}
+
+.finalcall{
+  display: inline-block;
+  position: absolute;
+  width: 100vw;
+  top: 70%;
+  text-align: center;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .btnhangup{
-  color: white;
+  display: inline-block;
+  position: absolute;
+  width: 100vw;
+  top: 87%;
   text-align: center;
-  padding: 15%
-} */
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.bgloved {
+  background: rgb(0, 0, 0);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bgandrew {
+  background: linear-gradient(to bottom,white, lightyellow, rgb(255, 255, 178));
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+.lovedhim{
+  text-align: left;
+  font-size: 36;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(255, 255, 255)
+}
+
+.leftbuttonl{
+  display: inline-block;
+  text-align: left;
+  color: white;
+}
+
+.rightbuttonl{
+  display: inline-block;
+  position: absolute;
+  left: 10%;
+  color: white;
+}
+
+.andrew{
+  text-align: left;
+  font-size: 36;
+  font-weight: 1;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+}
