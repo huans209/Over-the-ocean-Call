@@ -2,8 +2,12 @@ a{
   text-decoration: none;
 }
 
+body{
+  margin: 0;
+}
+
 .bgindex {
-  background: linear-gradient(to bottom,white, lightcyan, skyblue, cornflowerblue);
+  background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -18,7 +22,107 @@ a{
   font-size: 85%;
   font-weight: 400;
   color: white;
-  cursor: default;
+  cursor: text;
+}
+
+/* .container{
+  overflow: hidden;
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  top: 57%;
+  font-family: 'courier-prime', monospace;
+  font-size: 90%;
+  font-weight: 400;
+  color: white;
+  cursor: text;
+}
+
+.typed-out0{
+  overflow: hidden;
+  border-right: .15em solid rgba(255, 255, 255, 0);
+  white-space: nowrap;
+  animation: typing 2.5s steps(50, end) forwards;
+  font-size: 90%;
+  width: 100vw;
+}
+.typed-out1{
+  overflow: hidden;
+  border-right: .15em solid rgba(255, 255, 255, 0);
+  white-space: nowrap;
+  animation: typing 2.5s steps(50, end) forwards;
+  animation-delay: 2s;
+  font-size: 90%;
+  width: 100vw;
+}
+.typed-out2{
+  overflow: hidden;
+  border-right: .15em solid rgba(255, 255, 255, 0);
+  white-space: nowrap;
+  animation: typing 2.5s steps(50, end) forwards;
+  animation-delay: 4s;
+  font-size: 90%;
+  width: 100vw;
+}
+.typed-out3{
+  overflow: hidden;
+  border-right: .15em solid rgba(255, 255, 255, 0);
+  white-space: nowrap;
+  animation: typing 2.5s steps(50, end) forwards;
+  animation-delay: 6s;
+  font-size: 90%;
+  width: 100vw;
+}
+.typed-out4{
+  overflow: hidden;
+  border-right: .15em solid rgba(255, 255, 255, 0);
+  white-space: nowrap;
+  animation: typing 2.5s steps(50, end) forwards;
+  animation-delay: 8s;
+  font-size: 90%;
+  width: 100vw;
+}
+.typed-out5{
+  overflow: hidden;
+  border-right: .15em solid rgba(255, 255, 255, 0);
+  white-space: nowrap;
+  animation: typing 2.5s steps(50, end) forwards;
+  animation-delay: 10s;
+  font-size: 90%;
+  width: 100vw;
+}
+.typed-out6{
+  overflow: hidden;
+  border-right: .15em solid rgba(255, 255, 255, 0);
+  white-space: nowrap;
+  animation: typing 2.5s steps(50, end) forwards;
+  animation-delay: 12s;
+  font-size: 90%;
+  width: 100vw;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+} */
+
+.enterbutton{
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  top: 85%;
+  font-family: 'courier-prime', monospace;
+  font-size: 85%;
+  font-weight: 400;
+  color: white;
+  opacity: 0%;
+
+  animation: emerge;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
 }
 
 .lizzybutton{
@@ -30,6 +134,268 @@ a{
   font-size: 85%;
   font-weight: 400;
   color: white;
+}
+
+introbutton .lizzybutton {
+  display: none;
+}
+
+introbutton:hover .enterbutton {
+  display: none;
+}
+
+introbutton:hover .lizzybutton {
+  display: inline;
+}
+
+.circle {
+  display: inline-block;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 100%;
+  animation: waves;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes waves {
+  0% {
+      opacity: 0%;
+      cursor: default;
+  }
+  50% {
+      opacity: 100%;
+      cursor: crosshair;
+  }
+  100% {
+      opacity: 0%;
+      cursor: default;
+  }
+}
+
+.leftside1 {
+  position: fixed;
+  top: 37.5vh;
+  left: 30vw;
+  background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+}
+
+.rightside1 {
+  position: fixed;
+  top: 37.5vh;
+  left: 55vw;
+  background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+}
+
+.leftside2 {
+  position: fixed;
+  top: 37.5vh;
+  left: 25vw;
+  background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+  animation: hightide;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.rightside2 {
+  position: fixed;
+  top: 37.5vh;
+  left: 60vw;
+  background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+  animation: lowtide;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hightide {
+  0% {
+      left: 25vw;
+      opacity: 0%;
+      cursor: default;
+  }
+  12.5% {
+      opacity: 100%;
+      cursor: crosshair;
+  }
+  25% {
+      opacity: 0%;
+      cursor: default;
+  }
+  37.5% {
+      opacity: 100%;
+      cursor: crosshair;
+  }
+  50% {
+      opacity: 0%;
+      cursor: default;
+  }
+  62.5% {
+      opacity: 100%;
+      cursor: crosshair;
+  }
+  75% {
+      opacity: 0%;
+      cursor: default;
+  }
+  87.5% {
+      opacity: 100%;
+      cursor: crosshair;
+  }
+  100% {
+      left: 20vw;
+      opacity: 0%;
+      cursor: default;
+  }
+}
+
+@keyframes lowtide {
+  0% {
+      left: 60vw;
+      opacity: 0%;
+      cursor: default;
+  }
+  12.5% {
+      opacity: 100%;
+      cursor: crosshair;
+  }
+  25% {
+      opacity: 0%;
+      cursor: default;
+  }
+  37.5% {
+      opacity: 100%;
+      cursor: crosshair;
+  }
+  50% {
+      opacity: 0%;
+      cursor: default;
+  }
+  62.5% {
+      opacity: 100%;
+      cursor: crosshair;
+  }
+  75% {
+      opacity: 0%;
+      cursor: default;
+  }
+  87.5% {
+      opacity: 100%;
+      cursor: crosshair;
+  }
+  100% {
+      left: 65vw;
+      opacity: 0%;
+      cursor: default;
+  }
+}
+
+.leftside3 {
+  position: fixed;
+  top: 37.5vh;
+  left: 15vw;
+  background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+}
+
+.rightside3 {
+  position: fixed;
+  top: 37.5vh;
+  left: 70vw;
+  background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+}
+
+.leftside4 {
+  position: fixed;
+  top: 37.5vh;
+  left: 10vw;
+  background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+}
+
+.rightside4 {
+  position: fixed;
+  top: 37.5vh;
+  left: 75vw;
+  background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+}
+
+.leftside5 {
+  position: fixed;
+  top: 37.5vh;
+  left: 35vw;
+  background-image: linear-gradient(to bottom,white, #fff9c4);
+}
+
+.rightside5 {
+  position: fixed;
+  top: 37.5vh;
+  left: 50vw;
+  background-image: linear-gradient(to bottom,white, #fff9c4);
+}
+
+.leftside6 {
+  position: fixed;
+  top: 37.5vh;
+  left: 35vw;
+  background-color: #fff9c4;
+  animation: sunrise;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.rightside6 {
+  position: fixed;
+  top: 37.5vh;
+  left: 50vw;
+  background-color: #fff9c4;
+  animation: sunset;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes sunrise {
+  0% {
+      background-color: #fff9c4;
+      opacity: 100%;
+      cursor: default;
+  }
+  50%{
+      background-color: #bbdefb;
+      left: 35vw;
+      opacity: 100%;
+      cursor: crosshair
+  }
+  100% {
+      background-color: #64b5f6;
+      left: 33vw;
+      opacity: 0%;
+      cursor: default;
+  }
+}
+
+@keyframes sunset {
+  0% {
+      background-color: #fff9c4;
+      opacity: 100%;
+      cursor: default;
+  }
+  50%{
+    background-color: #bbdefb;
+      left: 50vw;
+      opacity: 100%;
+      cursor: crosshair
+  }
+  100% {
+      background-color: #64b5f6;
+      left: 52vw;
+      opacity: 0%;
+      cursor: default;
+  }
 }
 
 .normal{
@@ -63,6 +429,13 @@ a{
   color: black;
 }
 
+.bgtravel {
+  background-color: #fff9c4;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
 .travelbutton{
   display: inline-block;
   position: absolute;
@@ -79,39 +452,227 @@ a{
   animation-iteration-count: 1;
 }
 
-.anyway{
-  padding-left: 5%;
-  padding-top: 3%;
+.anyway1{
+  position: absolute;
+  left: 5%;
+  top: 3%;
   font-family: baskerville-urw, serif;
   font-size: 125%;
   font-weight: 400;
   color: black;
   cursor: not-allowed;
 
-  animation:corrupt;
-  animation-duration: 20s;
+  animation: corrupt1;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.anyway2{
+  position: absolute;
+  left: 5%;
+  top: 3%;
+  font-family: baskerville-urw, serif;
+  font-size: 125%;
+  font-weight: 400;
+  color: rgb(56,43,43);
+  cursor: not-allowed;
+  opacity: 0;
+
+  animation: corrupt2;
+  animation-duration: 4s;
+  animation-delay: 4s;
   transform-origin: 0 0;
   animation-timing-function: linear;
   animation-iteration-count: 1;
 }
 
-@keyframes corrupt {
+.anyway3{
+  position: absolute;
+  left: 5%;
+  top: 3%;
+  font-family: baskerville-urw, serif;
+  font-size: 125%;
+  font-weight: 400;
+  color: rgb(101,58,58);
+  cursor: not-allowed;
+  opacity: 0;
+
+  animation: corrupt3;
+  animation-duration: 4s;
+  animation-delay: 8s;
+  transform-origin: 0 0;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+.anyway4{
+  position: absolute;
+  left: 5%;
+  top: 3%;
+  font-family: baskerville-urw, serif;
+  font-size: 125%;
+  font-weight: 400;
+  color: rgb(139,55,55);
+  cursor: not-allowed;
+  opacity: 0;
+
+  animation: corrupt4;
+  animation-duration: 4s;
+  animation-delay: 12s;
+  transform-origin: 0 0;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+.anyway5{
+  position: absolute;
+  left: 5%;
+  top: 3%;
+  font-family: baskerville-urw, serif;
+  font-size: 200%;
+  font-weight: 400;
+  color: rgb(171, 47, 47);
+  cursor: not-allowed;
+  opacity: 0;
+
+  animation: corrupt5;
+  animation-duration: 4s;
+  animation-delay: 16s;
+  transform-origin: 0 0;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes corrupt1 {
   0% {
       color: black;
-      transform: scale(1,1) translateX(0px);
-  }
-  25%{
-      color: rgb(103, 63, 63);
-      transform: scale(1.25,1) translateX(125px);
   }
   50%{
-      color: rgb(177, 50, 50);
-      transform: scale(1.75,1) translateX(250px);
+      color: rgb(26, 23, 23);
+  }
+  99%{
+      color: rgb(49, 39, 39);
+      opacity: 100%;
 }
   100% {
-      color: red;
-      transform: scale(3,1) translateX(500px);
+    color: rgb(49, 39, 39);
+      opacity: 0%;
   }
+}
+
+@keyframes corrupt2 {
+  0% {
+      opacity: 0%;
+      color: rgb(49, 39, 39);
+      transform: scale(1,1);
+  }
+  1%{
+      opacity: 100%;
+      color: rgb(49, 39, 39);
+      transform: scale(1,1);
+  }
+  50%{
+      color: rgb(76, 52, 52);
+      transform: scale(1.05,1);
+  }
+  99%{
+      color: rgb(99, 55, 55);
+      transform: scale(1.1,1);
+      opacity: 100%;
+}
+  100% {
+    color: rgb(99, 55, 55);
+      transform: scale(1.1,1);
+      opacity: 0%;
+  }
+}
+
+@keyframes corrupt3 {
+  0% {
+      opacity: 0%;
+      color: rgb(99, 55, 55);
+      transform: scale(1.1,1);
+  }
+  1%{
+      opacity: 100%;
+      color: rgb(99, 55, 55);
+      transform: scale(1.1,1);
+  }
+  50%{
+      color: rgb(124, 59, 59);
+      transform: scale(1.2,1);
+  }
+  99%{
+      color: rgb(151, 52, 52);
+      transform: scale(1.3,1);
+      opacity: 100%;
+}
+  100% {
+      color: rgb(151, 52, 52);
+      transform: scale(1.3,1);
+      opacity: 0%;
+  }
+}
+
+@keyframes corrupt4 {
+  0% {
+      opacity: 0%;
+      color: rgb(151, 52, 52);
+      transform: scale(1.3,1);
+  }
+  1%{
+      opacity: 100%;
+      color: rgb(151, 52, 52);
+      transform: scale(1.3,1);
+  }
+  50%{
+      color: rgb(174, 46, 46);
+      transform: scale(1.5,1.05);
+  }
+  99%{
+      color: rgb(201, 33, 33);
+      transform: scale(1.75,1.1);
+      opacity: 100%;
+}
+  100% {
+    color: rgb(201, 33, 33);
+      transform: scale(1.75,1.1);
+      opacity: 0%;
+  }
+}
+
+@keyframes corrupt5 {
+  0% {
+      color: rgb(255, 0, 0);
+      opacity: 0%;
+  }
+  1%{
+      opacity: 100%;
+      color: rgb(255, 0, 0);
+  }
+  50%{
+      color: rgb(255, 0, 0);
+  }
+  99%{
+      color: rgb(255, 0, 0);
+      opacity: 100%;
+}
+  100% {
+      color: rgb(255, 0, 0);
+      opacity: 0%;
+  }
+}
+
+.probbutton{
+  position: absolute;
+  top: 37%;
+  left: 5%;
+  font-family: baskerville-urw, serif;
+  font-size: 125%;
+  font-weight: 400;
+  color: black;
 }
 
 .canyoutitle{
@@ -340,7 +901,6 @@ a{
   font-size: 85%;
   font-weight: 400;
   color: white;
-  cursor: default;
 }
 
 .hangupbutton{
@@ -352,6 +912,14 @@ a{
   font-size: 85%;
   font-weight: 400;
   color: white;
+  opacity: 0%;
+
+  animation: emerge;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .bgloved {
@@ -362,7 +930,7 @@ a{
 }
 
 .bgandrew {
-  background: linear-gradient(to bottom,white, lightyellow, rgb(255, 255, 178));
+  background: linear-gradient(to bottom,white, #fff9c4);
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -381,7 +949,7 @@ a{
 .leftlovebutton{
   display: inline-block;
   position: absolute;
-  top: 82%;
+  top: 85%;
   left: 5.5%;
   font-family: baskerville-urw, serif;
   font-size: 125%;
@@ -392,7 +960,7 @@ a{
 .rightlovebutton{
   display: inline-block;
   position: absolute;
-  top: 82%;
+  top: 85%;
   left: 17%;
   font-family: baskerville-urw, serif;
   font-size: 125%;
@@ -400,7 +968,7 @@ a{
   color: white;
 }
 
-.andrew{
+.andrew1{
   padding-left: 5%;
   padding-top: 3%;
   font-family: baskerville-urw, serif;
@@ -409,20 +977,28 @@ a{
   color: rgb(110, 110, 110);
   cursor: default;
 
-  animation:emerge;
-  animation-duration: 4s;
+  animation: emerge;
+  animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
 }
 
-@keyframes emerge {
-  0% {
-      opacity: 0%;
-  }
+.andrew2{
+  padding-left: 5%;
+  padding-top: 0%;
+  font-family: baskerville-urw, serif;
+  font-size: 125%;
+  font-weight: 400;
+  color: rgb(110, 110, 110);
+  opacity: 0%;
+  cursor: default;
 
-  100% {
-      opacity: 100%
-  }
+  animation: emerge;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .andrewdot{
@@ -432,20 +1008,21 @@ a{
   font-size: 125%;
   font-weight: 400;
   color: rgb(110, 110, 110);
+  opacity: 0%;
 
-  animation:emergedot;
-  animation-duration: 4.5s;
+  animation: emerge;
+  animation-duration: 1s;
+  animation-delay: 4.5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
-@keyframes emergedot {
+@keyframes emerge {
   0% {
       opacity: 0%;
   }
-  80%{
-      opacity: 0%;
-  }
+
   100% {
       opacity: 100%
   }
