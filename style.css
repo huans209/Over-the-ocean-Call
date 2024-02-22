@@ -1,5 +1,6 @@
 a{
   text-decoration: none;
+  color: inherit;
 }
 
 body{
@@ -9,8 +10,24 @@ body{
 .bgindex {
   background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
   position: absolute;
-  height: 100vh;
+  height: 102vh;
   width: 100vw;
+  animation: waveshift;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes waveshift {
+  0% {
+    transform: translateY(0)
+  }
+  50% {
+    transform: translateY(-2vh)
+  }
+  100% {
+    transform: translateY(0)
+  }
 }
 
 .introcall{
@@ -23,6 +40,12 @@ body{
   font-weight: 400;
   color: white;
   cursor: text;
+
+  animation: emerge;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 /* .container{
@@ -150,9 +173,10 @@ introbutton:hover .lizzybutton {
 
 .circle {
   display: inline-block;
-  width: 15vw;
-  height: 15vw;
+  width: 30vw;
+  height: 30vw;
   border-radius: 100%;
+  top: 20vh;
   animation: waves;
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
@@ -165,7 +189,7 @@ introbutton:hover .lizzybutton {
       cursor: default;
   }
   50% {
-      opacity: 100%;
+      opacity: 30%;
       cursor: crosshair;
   }
   100% {
@@ -176,22 +200,19 @@ introbutton:hover .lizzybutton {
 
 .leftside1 {
   position: fixed;
-  top: 37.5vh;
-  left: 30vw;
+  left: 20vw;
   background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
 }
 
 .rightside1 {
   position: fixed;
-  top: 37.5vh;
-  left: 55vw;
+  right: 20vw;
   background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
 }
 
 .leftside2 {
   position: fixed;
-  top: 37.5vh;
-  left: 25vw;
+  left: 17.5vw;
   background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
   animation: hightide;
   animation-duration: 20s;
@@ -202,8 +223,7 @@ introbutton:hover .lizzybutton {
 
 .rightside2 {
   position: fixed;
-  top: 37.5vh;
-  left: 60vw;
+  right: 17.5vw;
   background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
   animation: lowtide;
   animation-duration: 20s;
@@ -214,40 +234,48 @@ introbutton:hover .lizzybutton {
 
 @keyframes hightide {
   0% {
-      left: 25vw;
+      left: 17.5vw;
       opacity: 0%;
       cursor: default;
   }
-  12.5% {
-      opacity: 100%;
+  10% {
+      opacity: 40%;
       cursor: crosshair;
   }
-  25% {
+  20% {
       opacity: 0%;
       cursor: default;
   }
-  37.5% {
-      opacity: 100%;
+  30% {
+      opacity: 40%;
       cursor: crosshair;
+  }
+  40% {
+      opacity: 0%;
+      cursor: default;
   }
   50% {
-      opacity: 0%;
-      cursor: default;
-  }
-  62.5% {
-      opacity: 100%;
+      opacity: 40%;
       cursor: crosshair;
   }
-  75% {
+  60% {
       opacity: 0%;
       cursor: default;
   }
-  87.5% {
-      opacity: 100%;
+  70% {
+      opacity: 40%;
+      cursor: crosshair;
+  }
+  80% {
+      opacity: 0%;
+      cursor: default;
+  }
+  90% {
+      opacity: 40%;
       cursor: crosshair;
   }
   100% {
-      left: 20vw;
+      left: 12.5vw;
       opacity: 0%;
       cursor: default;
   }
@@ -255,40 +283,48 @@ introbutton:hover .lizzybutton {
 
 @keyframes lowtide {
   0% {
-      left: 60vw;
+      right: 17.5vw;
       opacity: 0%;
       cursor: default;
   }
-  12.5% {
-      opacity: 100%;
+  10% {
+      opacity: 40%;
       cursor: crosshair;
   }
-  25% {
+  20% {
       opacity: 0%;
       cursor: default;
   }
-  37.5% {
-      opacity: 100%;
+  30% {
+      opacity: 40%;
       cursor: crosshair;
+  }
+  40% {
+      opacity: 0%;
+      cursor: default;
   }
   50% {
-      opacity: 0%;
-      cursor: default;
-  }
-  62.5% {
-      opacity: 100%;
+      opacity: 40%;
       cursor: crosshair;
   }
-  75% {
+  60% {
       opacity: 0%;
       cursor: default;
   }
-  87.5% {
-      opacity: 100%;
+  70% {
+      opacity: 40%;
+      cursor: crosshair;
+  }
+  80% {
+      opacity: 0%;
+      cursor: default;
+  }
+  90% {
+      opacity: 40%;
       cursor: crosshair;
   }
   100% {
-      left: 65vw;
+      right: 12.5vw;
       opacity: 0%;
       cursor: default;
   }
@@ -296,83 +332,114 @@ introbutton:hover .lizzybutton {
 
 .leftside3 {
   position: fixed;
-  top: 37.5vh;
-  left: 15vw;
+  left: 10vw;
   background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+  z-index: 1
 }
 
 .rightside3 {
   position: fixed;
-  top: 37.5vh;
-  left: 70vw;
+  right: 10vw;
   background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+  z-index: 1
 }
 
 .leftside4 {
   position: fixed;
-  top: 37.5vh;
-  left: 10vw;
+  left: 5vw;
   background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
 }
 
 .rightside4 {
   position: fixed;
-  top: 37.5vh;
-  left: 75vw;
+  right: 5vw;
   background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+}
+
+.permacircle {
+  display: inline-block;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 100%;
+  top: 20vh;
+  animation: permawaves;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes permawaves {
+  0% {
+      opacity: 40%;
+      cursor: crosshair;
+  }
+  50% {
+      opacity: 60%;
+      cursor: crosshair;
+  }
+  100% {
+      opacity: 40%;
+      cursor: crosshair;
+  }
 }
 
 .leftside5 {
   position: fixed;
-  top: 37.5vh;
   left: 35vw;
   background-image: linear-gradient(to bottom,white, #fff9c4);
 }
 
 .rightside5 {
   position: fixed;
-  top: 37.5vh;
-  left: 50vw;
+  right: 35vw;
   background-image: linear-gradient(to bottom,white, #fff9c4);
 }
 
 .leftside6 {
   position: fixed;
-  top: 37.5vh;
   left: 35vw;
   background-color: #fff9c4;
   animation: sunrise;
-  animation-duration: 5s;
+  animation-duration: 6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
 
 .rightside6 {
   position: fixed;
-  top: 37.5vh;
-  left: 50vw;
+  right: 35vw;
   background-color: #fff9c4;
   animation: sunset;
-  animation-duration: 5s;
+  animation-duration: 6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
 
 @keyframes sunrise {
   0% {
-      background-color: #fff9c4;
-      opacity: 100%;
+    background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+      opacity: 0%;
       cursor: default;
   }
-  50%{
-      background-color: #bbdefb;
+  20% {
+    background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+      opacity: 0%;
+      cursor: default;
+  }
+  50% {
+    background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+      opacity: 25%;
+      cursor: default;
+  }
+  70%{
+    background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
       left: 35vw;
-      opacity: 100%;
+      opacity: 50%;
       cursor: crosshair
   }
   100% {
-      background-color: #64b5f6;
-      left: 33vw;
+    background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+      left: 30vw;
       opacity: 0%;
       cursor: default;
   }
@@ -380,19 +447,29 @@ introbutton:hover .lizzybutton {
 
 @keyframes sunset {
   0% {
-      background-color: #fff9c4;
-      opacity: 100%;
+    background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+      opacity: 0%;
       cursor: default;
   }
-  50%{
-    background-color: #bbdefb;
-      left: 50vw;
-      opacity: 100%;
+  20% {
+    background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+      opacity: 0%;
+      cursor: default;
+  }
+  50% {
+    background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+      opacity: 25%;
+      cursor: default;
+  }
+  70%{
+    background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+      right: 35vw;
+      opacity: 50%;
       cursor: crosshair
   }
   100% {
-      background-color: #64b5f6;
-      left: 52vw;
+    background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+      right: 30vw;
       opacity: 0%;
       cursor: default;
   }
@@ -405,6 +482,23 @@ introbutton:hover .lizzybutton {
   font-size: 125%;
   font-weight: 400;
   cursor: default;
+  z-index: 2;
+}
+
+.sensebutton{
+  display: inline-block;
+  position: absolute;
+  padding-top: 1%;
+  left: 5.5%;
+  font-family: baskerville-urw, serif;
+  font-size: 125%;
+  font-weight: 400;
+  color: black;
+}
+
+.sensebutton:hover{
+  color: #c0bb93;
+  transition: color 0.5s ease-in-out
 }
 
 .leftbutton{
@@ -418,6 +512,11 @@ introbutton:hover .lizzybutton {
   color: black;
 }
 
+.leftbutton:hover{
+  color: #2196f3;
+  transition: color 0.5s ease-in-out
+}
+
 .rightbutton{
   display: inline-block;
   position: absolute;
@@ -427,6 +526,11 @@ introbutton:hover .lizzybutton {
   font-size: 125%;
   font-weight: 400;
   color: black;
+}
+
+.rightbutton:hover{
+  color: #2196f3;
+  transition: color 0.5s ease-in-out;
 }
 
 .bgtravel {
@@ -445,17 +549,25 @@ introbutton:hover .lizzybutton {
   font-size: 125%;
   font-weight: 400;
   color: black;
+  opacity: 0;
 
   animation:emerge;
   animation-duration: 3s;
+  animation-delay: 1s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.travelbutton:hover{
+  color: #64b5f6;
+  transition: color 0.5s ease-in-out
 }
 
 .anyway1{
   position: absolute;
   left: 5%;
-  top: 3%;
+  top: 6%;
   font-family: baskerville-urw, serif;
   font-size: 125%;
   font-weight: 400;
@@ -472,7 +584,7 @@ introbutton:hover .lizzybutton {
 .anyway2{
   position: absolute;
   left: 5%;
-  top: 3%;
+  top: 6%;
   font-family: baskerville-urw, serif;
   font-size: 125%;
   font-weight: 400;
@@ -491,7 +603,7 @@ introbutton:hover .lizzybutton {
 .anyway3{
   position: absolute;
   left: 5%;
-  top: 3%;
+  top: 6%;
   font-family: baskerville-urw, serif;
   font-size: 125%;
   font-weight: 400;
@@ -510,7 +622,7 @@ introbutton:hover .lizzybutton {
 .anyway4{
   position: absolute;
   left: 5%;
-  top: 3%;
+  top: 6%;
   font-family: baskerville-urw, serif;
   font-size: 125%;
   font-weight: 400;
@@ -529,9 +641,9 @@ introbutton:hover .lizzybutton {
 .anyway5{
   position: absolute;
   left: 5%;
-  top: 3%;
+  top: 6%;
   font-family: baskerville-urw, serif;
-  font-size: 200%;
+  font-size: 190%;
   font-weight: 400;
   color: rgb(171, 47, 47);
   cursor: not-allowed;
@@ -543,12 +655,18 @@ introbutton:hover .lizzybutton {
   transform-origin: 0 0;
   animation-timing-function: linear;
   animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes corrupt1 {
   0% {
       color: black;
+      opacity: 0%;
   }
+  5% {
+      color: black;
+      opacity: 100%;
+  } 
   50%{
       color: rgb(26, 23, 23);
   }
@@ -557,7 +675,7 @@ introbutton:hover .lizzybutton {
       opacity: 100%;
 }
   100% {
-    color: rgb(49, 39, 39);
+      color: rgb(49, 39, 39);
       opacity: 0%;
   }
 }
@@ -568,7 +686,7 @@ introbutton:hover .lizzybutton {
       color: rgb(49, 39, 39);
       transform: scale(1,1);
   }
-  1%{
+  5%{
       opacity: 100%;
       color: rgb(49, 39, 39);
       transform: scale(1,1);
@@ -577,7 +695,7 @@ introbutton:hover .lizzybutton {
       color: rgb(76, 52, 52);
       transform: scale(1.05,1);
   }
-  99%{
+  95%{
       color: rgb(99, 55, 55);
       transform: scale(1.1,1);
       opacity: 100%;
@@ -595,7 +713,7 @@ introbutton:hover .lizzybutton {
       color: rgb(99, 55, 55);
       transform: scale(1.1,1);
   }
-  1%{
+  5%{
       opacity: 100%;
       color: rgb(99, 55, 55);
       transform: scale(1.1,1);
@@ -604,7 +722,7 @@ introbutton:hover .lizzybutton {
       color: rgb(124, 59, 59);
       transform: scale(1.2,1);
   }
-  99%{
+  95%{
       color: rgb(151, 52, 52);
       transform: scale(1.3,1);
       opacity: 100%;
@@ -622,7 +740,7 @@ introbutton:hover .lizzybutton {
       color: rgb(151, 52, 52);
       transform: scale(1.3,1);
   }
-  1%{
+  5%{
       opacity: 100%;
       color: rgb(151, 52, 52);
       transform: scale(1.3,1);
@@ -631,7 +749,7 @@ introbutton:hover .lizzybutton {
       color: rgb(174, 46, 46);
       transform: scale(1.5,1.05);
   }
-  99%{
+  95%{
       color: rgb(201, 33, 33);
       transform: scale(1.75,1.1);
       opacity: 100%;
@@ -648,21 +766,42 @@ introbutton:hover .lizzybutton {
       color: rgb(255, 0, 0);
       opacity: 0%;
   }
-  1%{
+  5%{
       opacity: 100%;
       color: rgb(255, 0, 0);
   }
   50%{
       color: rgb(255, 0, 0);
   }
-  99%{
+  95%{
       color: rgb(255, 0, 0);
       opacity: 100%;
 }
   100% {
       color: rgb(255, 0, 0);
-      opacity: 0%;
+      opacity: 100%;
   }
+}
+
+.maybutton{
+  position: absolute;
+  top: 37%;
+  left: 5%;
+  font-family: baskerville-urw, serif;
+  font-size: 125%;
+  font-weight: 400;
+  color: black;
+  opacity: 0%;
+
+  animation: emergebutton;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count:  1;
+}
+
+.maybutton:hover{
+  transform: scale(3,1);
+  transition: transform 0.5s ease-in-out;
 }
 
 .probbutton{
@@ -672,7 +811,103 @@ introbutton:hover .lizzybutton {
   font-family: baskerville-urw, serif;
   font-size: 125%;
   font-weight: 400;
+  color: rgb(76,52,52);
+  opacity: 0%;
+
+  animation: emergebutton;
+  animation-duration: 4s;
+  animation-delay: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count:  1;
+}
+
+.probbutton:hover{
   color: black;
+  transition: color 0.5s ease-in-out;
+}
+
+.yesbutton{
+  position: absolute;
+  top: 37%;
+  left: 5%;
+  font-family: baskerville-urw, serif;
+  font-size: 125%;
+  font-weight: 400;
+  color: rgb(124,59,59);
+  opacity: 0%;
+
+  animation: emergebutton;
+  animation-duration: 4s;
+  animation-delay: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count:  1;
+}
+
+.yesbutton:hover{
+  color: black;
+  transition: color 0.5s ease-in-out;
+}
+
+.havebutton{
+  position: absolute;
+  top: 37%;
+  left: 5%;
+  font-family: baskerville-urw, serif;
+  font-size: 125%;
+  font-weight: 400;
+  color: rgb(174,46,46);
+  opacity: 0%;
+  transition: color 0.5s ease-in-out;
+
+  animation: emergebutton;
+  animation-duration: 4s;
+  animation-delay: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count:  1;
+}
+
+.havebutton:hover{
+  color: black;
+}
+
+.needbutton{
+  position: absolute;
+  top: 37%;
+  left: 5%;
+  font-family: baskerville-urw, serif;
+  font-size: 125%;
+  font-weight: 400;
+  color: rgb(255,0,0);
+  opacity: 0%;
+  transition: transform 0.5s ease-in-out;
+  transform-origin: 0 0;
+
+  animation: emerge;
+  animation-duration: 0.2s;
+  animation-delay: 16s;
+  animation-timing-function: linear;
+  animation-iteration-count:  1;
+  animation-fill-mode: forwards;
+}
+
+.needbutton:hover{
+  transform: scaleX(1.5);
+  color: black;
+}
+
+@keyframes emergebutton {
+  0% {
+      opacity: 0%;
+  }
+  5% {
+      opacity: 100%;
+  } 
+  95% {
+      opacity: 100%;
+  } 
+  100% {
+      opacity: 0%
+  }
 }
 
 .canyoutitle{
@@ -686,7 +921,7 @@ introbutton:hover .lizzybutton {
 
 .canyougrid{
   display: grid;
-  grid-template-columns: repeat(20, 2%);
+  grid-template-columns: repeat(30, 2%);
   grid-template-rows: repeat(8, 15%);
   padding-left: 5%;
   padding-top: 1%;
@@ -729,6 +964,64 @@ introbutton:hover .lizzybutton {
   grid-column: 1/20;
 }
 
+.ycitem1{
+  grid-row: 1;
+  grid-column: 8/20;
+}
+.ycitem2{
+  grid-row: 2;
+  grid-column: 2/20;
+}
+.ycitem3{
+  grid-row: 3;
+  grid-column: 12/20;
+}
+.ycitem4{
+  grid-row: 4;
+  grid-column: 18/30;
+}
+.ycitem5{
+  grid-row: 5;
+  grid-column: 4/20;
+}
+.ycitem6{
+  grid-row: 6;
+  grid-column: 10/25;
+}
+.ycitem7{
+  grid-row: 7;
+  grid-column: 14/20;
+}
+
+.yhitem1{
+  grid-row: 1;
+  grid-column: 1/20;
+}
+.yhitem2{
+  grid-row: 2;
+  grid-column: 1/20;
+}
+.yhitem3{
+  grid-row: 3;
+  grid-column: 1/20;
+}
+.yhitem4{
+  grid-row: 4;
+  grid-column: 1/20;
+}
+.yhitem5{
+  grid-row: 5;
+  grid-column: 1/20;
+}
+.yhitem6{
+  grid-row: 6;
+  grid-column: 1/20;
+}
+.yhitem7{
+  grid-row: 7;
+  grid-column: 1/20;
+}
+
 .imfinegrid{
   display: grid;
   grid-template-columns: repeat(3, 18%);
@@ -739,43 +1032,102 @@ introbutton:hover .lizzybutton {
   font-size: 125%;
   font-weight: 400;
   color: black;
+  text-decoration-color: black;
   cursor: default;
 }
 
+.ifitem1:hover{color: #2196f3}
+.ifitem2:hover{color: #2196f3}
+.ifitem3:hover{color: #2196f3}
+.ifitem4:hover{color: #2196f3}
+.ifitem5:hover{color: #2196f3}
+.ifitem6:hover{color: #2196f3}
+.ifitem7:hover{color: #2196f3}
+
 .ifitem1{
   grid-row: 1;
-  grid-column: 1/2;
+  grid-column: 1/1;
   color: black;
+  cursor: pointer;  
+  z-index: 2;
+}
+.ofitem1{
+  grid-row: 1;
+  grid-column: 1/1;
+  color: #2196f3;
+  z-index: 2;
 }
 .ifitem2{
   grid-row: 2;
-  grid-column: 2/3;
+  grid-column: 2/2;
   color: black;
+  z-index: 2;
+}
+.ofitem2{
+  grid-row: 2;
+  grid-column: 2/2;
+  color: #2196f3;
+  z-index: 2;
 }
 .ifitem3{
   grid-row: 3;
-  grid-column: 1/2;
+  grid-column: 1/1;
   color: black;
+  z-index: 2;
+}
+.ofitem3{
+  grid-row: 3;
+  grid-column: 1/1;
+  color: #2196f3;
+  z-index: 2;
 }
 .ifitem4{
   grid-row: 4;
   grid-column: 3/5;
   color: black;
+  z-index: 2;
+}
+.ofitem4{
+  grid-row: 4;
+  grid-column: 3/5;
+  color: #2196f3;
+  z-index: 2;
 }
 .ifitem5{
   grid-row: 5;
-  grid-column: 1/2;
+  grid-column: 1/1;
   color: black;
+  z-index: 2;
+}
+.ofitem5{
+  grid-row: 5;
+  grid-column: 1/1;
+  color: #2196f3;
+  z-index: 2;
 }
 .ifitem6{
   grid-row: 6;
-  grid-column: 2/3;
+  grid-column: 2/2;
   color: black;
+  z-index: 2;
+}
+.ofitem6{
+  grid-row: 6;
+  grid-column: 2/2;
+  color: #2196f3;
+  z-index: 2;
 }
 .ifitem7{
   grid-row: 7;
-  grid-column: 1/2;
+  grid-column: 1/1;
   color: black;
+  z-index: 2;
+}
+.ofitem7{
+  grid-row: 7;
+  grid-column: 1/1;
+  color: #2196f3;  
+  z-index: 2;
 }
 
 .hidebutton{
@@ -787,6 +1139,11 @@ introbutton:hover .lizzybutton {
   font-size: 125%;
   font-weight: 400;
   color: black;
+  z-index: 2;
+}
+
+.hidebutton:hover{
+  color: rgb(255,0,0);
 }
 
 .notworktitle{
@@ -796,6 +1153,25 @@ introbutton:hover .lizzybutton {
   font-size: 110%;
   font-weight: 800;
   cursor: default;
+  animation: nwt;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
+}
+
+@keyframes nwt {
+  0% {
+      transform: translateX(0vw)
+  }
+  9.524%{
+      transform: translateX(-10vw)
+  }
+  59.524%{
+      transform: translateX(42.5vw)
+  }
+  100% {
+      transform: translateX(0vw)
+  }
 }
 
 .notworkgrid{
@@ -813,73 +1189,383 @@ introbutton:hover .lizzybutton {
 .nwitem1{
   grid-row: 1;
   grid-column: 15/20;
+  animation: nw1;
+  animation-duration: 17.5s;
+  animation-delay: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
+}
+
+@keyframes nw1 {
+  0% {
+      transform: translateX(0vw)
+  }
+  5%{
+      transform: translateX(7.5vw)
+  }
+  55%{
+      transform: translateX(-67.5vw)
+  }
+  100% {
+      transform: translateX(0vw)
+  }
 }
 
 .nwitem3{
   grid-row: 3;
   grid-column: 12/15;
+  animation: nw3;
+  animation-duration: 15s;
+  animation-delay: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
+}
+
+@keyframes nw3 {
+  0% {
+      transform: translateX(0vw)
+  }
+  31.832%{
+      transform: translateX(-52.5vw)
+  }
+  81.818%{
+      transform: translateX(30vw)
+  }
+  100% {
+      transform: translateX(0vw)
+  }
 }
 
 .nwitem4{
   grid-row: 4;
   grid-column: 1/7;
+  animation: nw4;
+  animation-duration: 15s;
+  animation-delay: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
+}
+
+@keyframes nw4 {
+  0% {
+      transform: translateX(0vw)
+  }
+  50%{
+      transform: translateX(85vw)
+  }
+  100%{
+      transform: translateX(0vw)
+  }
 }
 
 .nwitem6{
   grid-row: 6;
   grid-column: 6/10;
+  animation: nw6;
+  animation-duration: 25s;
+  animation-delay: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
+}
+
+@keyframes nw6 {
+  0% {
+      transform: translateX(0vw)
+  }
+  32.166%{
+      transform: translateX(50.5vw)
+  }
+  78.662%{
+      transform: translateX(-22.5vw)
+  }
+  82.166%{
+      transform: translateX(-17vw)
+  }
+  85.669%{
+      transform: translateX(-22.5vw)
+}
+  100% {
+      transform: translateX(0vw)
+  }
 }
 
 .nwitem6-2{
   grid-row: 6;
   grid-column: 10/13;
+  animation: nw6-2;
+  animation-duration: 25s;
+  animation-delay: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
+}
+
+@keyframes nw6-2 {
+  0% {
+      transform: translateX(0vw)
+  }
+  28.662%{
+      transform: translateX(45vw)
+  }
+  32.166%{
+      transform: translateX(39.5vw)
+  } 
+  35.669%{
+      transform: translateX(45vw)
+  }
+  82.166%{
+      transform: translateX(-28vw)
+  }
+  100% {
+      transform: translateX(0vw)
+  }
 }
 
 .nwitem7{
   grid-row: 7;
   grid-column: 17/20;
+  animation: nw7;
+  animation-duration: 17.5s;
+  animation-delay: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
+}
+
+@keyframes nw7 {
+  0% {
+      transform: translateX(0vw)
+  }
+  3%{
+      transform: translateX(5vw)
+  }
+  53%{
+      transform: translateX(-77.5vw)
+  }
+  100% {
+      transform: translateX(0vw)
+  }
 }
 
 .nwitem8{
   grid-row: 8;
   grid-column: 18/20;
+  animation: nw8;
+  animation-duration: 17.5s;
+  animation-delay: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
+}
+
+@keyframes nw8 {
+  0% {
+      transform: translateX(0vw)
+  }
+  1.5%{
+      transform: translateX(2.5vw)
+  }
+  51.5%{
+      transform: translateX(-80vw)
+  }
+  100% {
+      transform: translateX(0vw)
+  }
 }
 
 .nwitem10{
   grid-row: 10;
   grid-column: 5/12;
+  animation: nw10;
+  animation-duration: 12.5s;
+  animation-delay: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
 }
+
+@keyframes nw10 {
+  0% {
+      transform: translateX(0vw)
+  }
+  19.231%{
+      transform: translateX(12.5vw)
+  }
+  69.231%{
+      transform: translateX(-20vw)
+  }
+  100% {
+      transform: translateX(0vw)
+  }
+}
+
 .nwitem10-2{
   grid-row: 10;
   grid-column: 13/19;
+  animation: nw10-2;
+  animation-duration: 12.5s;
+  animation-delay: 5.95s;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
+}
+
+@keyframes nw10-2 {
+  0% {
+      transform: translateX(0vw)
+  }
+  11.538%{
+      transform: translateX(-7.5vw)
+  }
+  61.538%{
+      transform: translateX(25vw)
+  }
+  100% {
+      transform: translateX(0vw)
+  }
 }
 
 .nwitem14{
   grid-row: 14;
   grid-column: 4/6;
+  animation: nw14;
+  animation-duration: 20s;
+  animation-delay: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
+}
+
+@keyframes nw14 {
+  0% {
+      transform: translateX(0vw)
+  }
+  21.429%{
+      transform: translateX(-15vw)
+  }
+  71.429%{
+      transform: translateX(27.5vw)
+  }
+  100% {
+      transform: translateX(0vw)
+  }
 }
 .nwitem14-2{
   grid-row: 14;
   grid-column: 7/12;
+  animation: nw14-2;
+  animation-duration: 20s;
+  animation-delay: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
+}
+
+@keyframes nw14-2 {
+  0% {
+      transform: translateX(0vw)
+  }
+  21.429%{
+      transform: translateX(-15vw)
+  }
+  71.429%{
+      transform: translateX(27.5vw)
+  }
+  100% {
+      transform: translateX(0vw)
+  }
 }
 .nwitem14-3{
   grid-row: 14;
   grid-column: 14/17;
+  animation: nw14-3;
+  animation-duration: 20s;
+  animation-delay: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
+}
+
+@keyframes nw14-3 {
+  0% {
+      transform: translateX(0vw)
+  }
+  21.429%{
+      transform: translateX(-15vw)
+  }
+  71.429%{
+      transform: translateX(27.5vw)
+  }
+  100% {
+      transform: translateX(0vw)
+  }
 }
 
 .nwitem17{
   grid-row: 17;
   grid-column: 2/8;
+  animation: nw17;
+  animation-duration: 17.5s;
+  animation-delay: 8.5s;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
+}
+
+@keyframes nw17 {
+  0% {
+      transform: translateX(0vw)
+  }
+  3%{
+      transform: translateX(-5vw)
+  }
+  53%{
+      transform: translateX(77.5vw)
+  }
+  100% {
+      transform: translateX(0vw)
+  }
 }
 
 .nwitem19{
   grid-row: 19;
   grid-column: 11/15;
+  animation: nw19;
+  animation-duration: 15s;
+  animation-delay: 9.5s;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
+}
+
+@keyframes nw19 {
+  0% {
+      transform: translateX(0vw)
+  }
+  20.588%{
+      transform: translateX(35vw)
+  }
+  69.118%{
+      transform: translateX(-47.5vw)
+  }
+  100% {
+      transform: translateX(0vw)
+  }
 }
 
 .nwitem20{
   grid-row: 20;
   grid-column: 16/20;
+  animation: nw20;
+  animation-duration: 15s;
+  animation-delay: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
+}
+
+@keyframes nw20 {
+  0% {
+      transform: translateX(0vw)
+  }
+  8.571%{
+      transform: translateX(15vw)
+  }
+  58.571%{
+      transform: translateX(-72.5vw)
+  }
+  100% {
+      transform: translateX(0vw)
+  }
 }
 
 .notworkbutton{
@@ -890,6 +1576,243 @@ introbutton:hover .lizzybutton {
   font-size: 110%;
   font-weight: 400;
   color: black;
+  animation: nwb;
+  animation-duration: 60s;
+  animation-delay: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
+}
+
+@keyframes nwb {
+  0% {
+      transform: translateX(0vw)
+  }
+  50%{
+      transform: translateX(82.5vw)
+  }
+  100% {
+      transform: translateX(0vw)
+  }
+}
+
+.notworkbutton:hover{
+  color: #64b5f6;
+  transition: color 0.5s ease-in-out
+}
+
+.bghangup {
+  background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+@keyframes calltype {
+  0% {
+      opacity: 0%;
+  }
+  0.01%{
+      opacity: 100%;
+  }
+  99.99%{
+      opacity: 100%;
+  }
+  100% {
+      opacity: 0%;
+  }
+}
+
+.call1{
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  top: 65%;
+  font-family: 'courier', monospace;
+  font-size: 85%;
+  font-weight: 400;
+  color: white;
+  opacity: 0;
+  animation: calltype;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.call2{
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  top: 65%;
+  font-family: 'courier', monospace;
+  font-size: 85%;
+  font-weight: 400;
+  color: white;
+  opacity: 0;
+  animation: calltype;
+  animation-duration: 0.2s;
+  animation-delay: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.call3{
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  top: 65%;
+  font-family: 'courier', monospace;
+  font-size: 85%;
+  font-weight: 400;
+  color: white;
+  opacity: 0;
+  animation: calltype;
+  animation-duration: 0.2s;
+  animation-delay: 2.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.call4{
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  top: 65%;
+  font-family: 'courier', monospace;
+  font-size: 85%;
+  font-weight: 400;
+  color: white;
+  opacity: 0;
+  animation: calltype;
+  animation-duration: 1s;
+  animation-delay: 2.4s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.call5{
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  top: 65%;
+  font-family: 'courier', monospace;
+  font-size: 85%;
+  font-weight: 400;
+  color: white;
+  opacity: 0;
+  animation: calltype;
+  animation-duration: 1s;
+  animation-delay: 3.4s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.call6{
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  top: 65%;
+  font-family: 'courier', monospace;
+  font-size: 85%;
+  font-weight: 400;
+  color: white;
+  opacity: 0;
+  animation: calltype;
+  animation-duration: 0.4s;
+  animation-delay: 4.4s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.call7{
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  top: 65%;
+  font-family: 'courier', monospace;
+  font-size: 85%;
+  font-weight: 400;
+  color: white;
+  opacity: 0;
+  animation: calltype;
+  animation-duration: 1s;
+  animation-delay: 4.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.call8{
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  top: 65%;
+  font-family: 'courier', monospace;
+  font-size: 85%;
+  font-weight: 400;
+  color: white;
+  opacity: 0;
+  animation: calltype;
+  animation-duration: 0.3s;
+  animation-delay: 5.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.call9{
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  top: 65%;
+  font-family: 'courier', monospace;
+  font-size: 85%;
+  font-weight: 400;
+  color: white;
+  opacity: 0;
+  animation: calltype;
+  animation-duration: 0.1s;
+  animation-delay: 6.1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.call10{
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  top: 65%;
+  font-family: 'courier', monospace;
+  font-size: 85%;
+  font-weight: 400;
+  color: white;
+  opacity: 0;
+  animation: calltype;
+  animation-duration: 0.3s;
+  animation-delay: 6.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.call11{
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  top: 65%;
+  font-family: 'courier', monospace;
+  font-size: 85%;
+  font-weight: 400;
+  color: white;
+  opacity: 0;
+  animation: calltype;
+  animation-duration: 0.1s;
+  animation-delay: 6.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.call12{
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  top: 65%;
+  font-family: 'courier', monospace;
+  font-size: 85%;
+  font-weight: 400;
+  color: white;
+  opacity: 0;
+  animation: calltype;
+  animation-duration: 0.1s;
+  animation-delay: 6.6s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
 }
 
 .finalcall{
@@ -901,6 +1824,25 @@ introbutton:hover .lizzybutton {
   font-size: 85%;
   font-weight: 400;
   color: white;
+  opacity: 0;
+  animation: callendtype;
+  animation-duration: 0.3s;
+  animation-delay: 6.7s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes callendtype {
+  0% {
+      opacity: 0%;
+  }
+  0.01%{
+      opacity: 100%;
+  }
+  100% {
+      opacity: 100%;
+  }
 }
 
 .hangupbutton{
@@ -916,10 +1858,16 @@ introbutton:hover .lizzybutton {
 
   animation: emerge;
   animation-duration: 3s;
-  animation-delay: 1s;
+  animation-delay: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+.hangupbutton:hover{
+  color: red;
+  font-weight: 700;
+  transition: all 1.5s ease-in-out;
 }
 
 .bgloved {
@@ -957,6 +1905,11 @@ introbutton:hover .lizzybutton {
   color: white;
 }
 
+.leftlovebutton:hover{
+  color: #fff9c4;
+  transition: color 0.75s ease-in-out;
+}
+
 .rightlovebutton{
   display: inline-block;
   position: absolute;
@@ -966,6 +1919,11 @@ introbutton:hover .lizzybutton {
   font-size: 125%;
   font-weight: 400;
   color: white;
+}
+
+.rightlovebutton:hover{
+  color: #fff9c4;
+  transition: color 0.75s ease-in-out;
 }
 
 .andrew1{
@@ -1016,6 +1974,11 @@ introbutton:hover .lizzybutton {
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+.andrewdot:hover{
+  color: white;
+  transition: color 0.75s ease-in-out;
 }
 
 @keyframes emerge {
