@@ -5,7 +5,10 @@ a{
 
 body{
   margin: 0;
-  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .bgindex {
@@ -215,6 +218,7 @@ introbutton:hover .lizzybutton {
   position: fixed;
   left: 17.5vw;
   background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+  z-index: 1;
   animation: hightide;
   animation-duration: 20s;
   animation-timing-function: linear;
@@ -226,6 +230,7 @@ introbutton:hover .lizzybutton {
   position: fixed;
   right: 17.5vw;
   background-image: linear-gradient(to bottom,white, #bbdefb, #64b5f6, #2196f3);
+  z-index: 1;
   animation: lowtide;
   animation-duration: 20s;
   animation-timing-function: linear;
@@ -468,10 +473,23 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 500;
   cursor: default;
   z-index: 2;
 }
+
+.travel{
+  padding-left: 5%;
+  padding-top: 3%;
+  font-family: new-zen, serif;
+  line-height: 1.47;
+  font-size: 125%;
+  font-weight: 500;
+  cursor: default;
+  z-index: 2;
+  color: #2196f3;
+}
+
 
 .sensebutton{
   display: inline-block;
@@ -481,7 +499,7 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 500;
   color: black;
 }
 
@@ -498,7 +516,7 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 500;
   color: black;
 }
 
@@ -515,7 +533,7 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 500;
   color: black;
 }
 
@@ -539,8 +557,8 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
-  color: black;
+  font-weight: 500;
+  color: #2196f3;
   opacity: 0;
 
   animation:emerge;
@@ -552,7 +570,7 @@ introbutton:hover .lizzybutton {
 }
 
 .travelbutton:hover{
-  color: #64b5f6;
+  color: black;
   transition: color 0.5s ease-in-out
 }
 
@@ -563,9 +581,10 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 500;
   color: black;
   cursor: not-allowed;
+  z-index: 2;
 
   animation: corrupt1;
   animation-duration: 4s;
@@ -581,10 +600,11 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 500;
   color: rgb(56,43,43);
   cursor: not-allowed;
   opacity: 0;
+  z-index: 2;
 
   animation: corrupt2;
   animation-duration: 4s;
@@ -601,10 +621,11 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 600;
   color: rgb(101,58,58);
   cursor: not-allowed;
   opacity: 0;
+  z-index: 2;
 
   animation: corrupt3;
   animation-duration: 4s;
@@ -621,10 +642,11 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 700;
   color: rgb(139,55,55);
   cursor: not-allowed;
   opacity: 0;
+  z-index: 2;
 
   animation: corrupt4;
   animation-duration: 4s;
@@ -641,10 +663,11 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 190%;
-  font-weight: 400;
+  font-weight: 500;
   color: rgb(171, 47, 47);
   cursor: not-allowed;
   opacity: 0;
+  z-index: 2;
 
   animation: corrupt5;
   animation-duration: 4s;
@@ -744,16 +767,16 @@ introbutton:hover .lizzybutton {
   }
   50%{
       color: rgb(174, 46, 46);
-      transform: scale(1.5,1.05);
+      transform: scale(1.5,1.02);
   }
   95%{
       color: rgb(201, 33, 33);
-      transform: scale(1.75,1.1);
+      transform: scale(1.75,1.05);
       opacity: 100%;
 }
   100% {
     color: rgb(201, 33, 33);
-      transform: scale(1.75,1.1);
+      transform: scale(1.75,1.05);
       opacity: 0%;
   }
 }
@@ -787,7 +810,7 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 500;
   color: black;
   opacity: 0%;
 
@@ -804,11 +827,12 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 500;
   color: rgb(76,52,52);
   opacity: 0%;
 
-  animation: emergebutton;
+  animation: corrupt2;
+  transform-origin: 0 0;
   animation-duration: 4s;
   animation-delay: 4s;
   animation-timing-function: linear;
@@ -827,11 +851,12 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 600;
   color: rgb(124,59,59);
   opacity: 0%;
 
-  animation: emergebutton;
+  animation: corrupt3;
+  transform-origin: 0 0;
   animation-duration: 4s;
   animation-delay: 8s;
   animation-timing-function: linear;
@@ -850,12 +875,13 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 700;
   color: rgb(174,46,46);
   opacity: 0%;
   transition: color 0.5s ease-in-out;
 
-  animation: emergebutton;
+  animation: corrupt4;
+  transform-origin: 0 0;
   animation-duration: 4s;
   animation-delay: 12s;
   animation-timing-function: linear;
@@ -872,8 +898,8 @@ introbutton:hover .lizzybutton {
   left: 5%;
   font-family: new-zen, serif;
   line-height: 1.47;
-  font-size: 125%;
-  font-weight: 400;
+  font-size: 150%;
+  font-weight: 800;
   color: rgb(255,0,0);
   opacity: 0%;
   transition: transform 0.5s ease-in-out;
@@ -927,7 +953,7 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 500;
   cursor: default;
 }
 
@@ -1046,7 +1072,7 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 500;
   color: black;
   text-decoration-color: black;
   cursor: default;
@@ -1154,7 +1180,7 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 500;
   color: black;
   z-index: 2;
 }
@@ -1201,7 +1227,7 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 110%;
-  font-weight: 400;
+  font-weight: 500;
   cursor: default;
 }
 
@@ -1594,7 +1620,7 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 110%;
-  font-weight: 400;
+  font-weight: 500;
   color: black;
   animation: nwb;
   animation-duration: 60s;
@@ -1910,7 +1936,7 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 500;
   color: white;
   cursor: default;
 }
@@ -1923,7 +1949,7 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 500;
   color: white;
 }
 
@@ -1940,7 +1966,7 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 500;
   color: white;
 }
 
@@ -1955,7 +1981,7 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 500;
   color: rgb(110, 110, 110);
   cursor: default;
 
@@ -1971,7 +1997,7 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 500;
   color: rgb(110, 110, 110);
   opacity: 0%;
   cursor: default;
@@ -1990,7 +2016,7 @@ introbutton:hover .lizzybutton {
   font-family: new-zen, serif;
   line-height: 1.47;
   font-size: 125%;
-  font-weight: 400;
+  font-weight: 500;
   color: rgb(110, 110, 110);
   opacity: 0%;
 
