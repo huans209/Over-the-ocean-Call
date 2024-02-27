@@ -797,14 +797,9 @@ introbutton:hover .lizzybutton {
   animation-iteration-count:  1;
 }
 
-.maybutton:hover{
-  transform: scale(3,1);
-  transition: transform 0.5s ease-in-out;
-}
-
 .probbutton{
   position: absolute;
-  top: 37%;
+  top: 42%;
   left: 5%;
   font-family: new-zen, serif;
   line-height: 1.47;
@@ -827,7 +822,7 @@ introbutton:hover .lizzybutton {
 
 .yesbutton{
   position: absolute;
-  top: 37%;
+  top: 47%;
   left: 5%;
   font-family: new-zen, serif;
   line-height: 1.47;
@@ -850,7 +845,7 @@ introbutton:hover .lizzybutton {
 
 .havebutton{
   position: absolute;
-  top: 37%;
+  top: 52%;
   left: 5%;
   font-family: new-zen, serif;
   line-height: 1.47;
@@ -873,7 +868,7 @@ introbutton:hover .lizzybutton {
 
 .needbutton{
   position: absolute;
-  top: 37%;
+  top: 67%;
   left: 5%;
   font-family: new-zen, serif;
   line-height: 1.47;
@@ -927,7 +922,6 @@ introbutton:hover .lizzybutton {
   grid-template-columns: repeat(30, 2%);
   grid-template-rows: repeat(8, 15%);
   grid-auto-flow: column;
-  grid-auto-rows: minmax(20%, auto);
   padding-left: 5%;
   padding-top: 1%;
   font-family: new-zen, serif;
