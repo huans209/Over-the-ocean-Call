@@ -52,88 +52,6 @@ body::-webkit-scrollbar {
   animation-fill-mode: forwards;
 }
 
-/* .container{
-  overflow: hidden;
-  display: inline-block;
-  position: absolute;
-  text-align: center;
-  width: 100vw;
-  top: 57%;
-  font-family: 'courier-prime', monospace;
-  font-size: 90%;
-  font-weight: 400;
-  color: white;
-  cursor: text;
-}
-
-.typed-out0{
-  overflow: hidden;
-  border-right: .15em solid rgba(255, 255, 255, 0);
-  white-space: nowrap;
-  animation: typing 2.5s steps(50, end) forwards;
-  font-size: 90%;
-  width: 100vw;
-}
-.typed-out1{
-  overflow: hidden;
-  border-right: .15em solid rgba(255, 255, 255, 0);
-  white-space: nowrap;
-  animation: typing 2.5s steps(50, end) forwards;
-  animation-delay: 2s;
-  font-size: 90%;
-  width: 100vw;
-}
-.typed-out2{
-  overflow: hidden;
-  border-right: .15em solid rgba(255, 255, 255, 0);
-  white-space: nowrap;
-  animation: typing 2.5s steps(50, end) forwards;
-  animation-delay: 4s;
-  font-size: 90%;
-  width: 100vw;
-}
-.typed-out3{
-  overflow: hidden;
-  border-right: .15em solid rgba(255, 255, 255, 0);
-  white-space: nowrap;
-  animation: typing 2.5s steps(50, end) forwards;
-  animation-delay: 6s;
-  font-size: 90%;
-  width: 100vw;
-}
-.typed-out4{
-  overflow: hidden;
-  border-right: .15em solid rgba(255, 255, 255, 0);
-  white-space: nowrap;
-  animation: typing 2.5s steps(50, end) forwards;
-  animation-delay: 8s;
-  font-size: 90%;
-  width: 100vw;
-}
-.typed-out5{
-  overflow: hidden;
-  border-right: .15em solid rgba(255, 255, 255, 0);
-  white-space: nowrap;
-  animation: typing 2.5s steps(50, end) forwards;
-  animation-delay: 10s;
-  font-size: 90%;
-  width: 100vw;
-}
-.typed-out6{
-  overflow: hidden;
-  border-right: .15em solid rgba(255, 255, 255, 0);
-  white-space: nowrap;
-  animation: typing 2.5s steps(50, end) forwards;
-  animation-delay: 12s;
-  font-size: 90%;
-  width: 100vw;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-} */
-
 .enterbutton{
   position: absolute;
   text-align: center;
@@ -199,6 +117,59 @@ introbutton:hover .lizzybutton {
   100% {
       opacity: 0%;
       cursor: default;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .circle {
+    display: block;
+    width: 35vh;
+    height: 35vh;
+  }
+  .leftside1 {
+    top: 15vh;
+    left: 32.5vw;
+  }
+  .rightside1 {
+    top: 50vh;
+    left: 32.5vw;
+  }
+  .leftside2 {
+    left: 32.5vw;
+    top: 15vh;
+    animation: lefttide;
+  }
+  .rightside2 {
+    left: 32.5vw;
+    top: 50vh;
+    animation: righttide;
+  }
+  .maybutton{
+    top: 90vh;
+  }
+  .probbutton{
+    top: 90vh;
+  } 
+  .yesbutton{
+    top: 90vh;
+  }
+  .havebutton{
+    top: 90vh;
+  }
+  .needbutton{
+    top: 90vh;
+  }
+  .leftside6 {
+    left: 32.5vw;
+    top: 32.5vh;
+    background-color: #fff9c4;
+    animation: sunup;
+  }
+  .rightside6 {
+    left: 32.5vw;
+    top: 32.5vh;
+    background-color: #fff9c4;
+    animation: sundown;
   }
 }
 
@@ -335,6 +306,103 @@ introbutton:hover .lizzybutton {
       cursor: default;
   }
 }
+@keyframes lefttide {
+  0% {
+      top: 15vh;
+      opacity: 0%;
+      cursor: default;
+  }
+  10% {
+      opacity: 40%;
+      cursor: crosshair;
+  }
+  20% {
+      opacity: 0%;
+      cursor: default;
+  }
+  30% {
+      opacity: 40%;
+      cursor: crosshair;
+  }
+  40% {
+      opacity: 0%;
+      cursor: default;
+  }
+  50% {
+      opacity: 40%;
+      cursor: crosshair;
+  }
+  60% {
+      opacity: 0%;
+      cursor: default;
+  }
+  70% {
+      opacity: 40%;
+      cursor: crosshair;
+  }
+  80% {
+      opacity: 0%;
+      cursor: default;
+  }
+  90% {
+      opacity: 40%;
+      cursor: crosshair;
+  }
+  100% {
+      top: 5vh;
+      opacity: 0%;
+      cursor: default;
+  }
+}
+
+@keyframes righttide {
+  0% {
+      top: 50vh;
+      opacity: 0%;
+      cursor: default;
+  }
+  10% {
+      opacity: 40%;
+      cursor: crosshair;
+  }
+  20% {
+      opacity: 0%;
+      cursor: default;
+  }
+  30% {
+      opacity: 40%;
+      cursor: crosshair;
+  }
+  40% {
+      opacity: 0%;
+      cursor: default;
+  }
+  50% {
+      opacity: 40%;
+      cursor: crosshair;
+  }
+  60% {
+      opacity: 0%;
+      cursor: default;
+  }
+  70% {
+      opacity: 40%;
+      cursor: crosshair;
+  }
+  80% {
+      opacity: 0%;
+      cursor: default;
+  }
+  90% {
+      opacity: 40%;
+      cursor: crosshair;
+  }
+  100% {
+      top: 60vh;
+      opacity: 0%;
+      cursor: default;
+  }
+}
 
 .leftside3 {
   position: fixed;
@@ -462,6 +530,51 @@ introbutton:hover .lizzybutton {
   100% {
     background-image: radial-gradient(white, #bbdefb, #64b5f6, #2196f3);
       right: 30vw;
+      opacity: 0%;
+      cursor: default;
+  }
+}
+@keyframes sunup {
+  0% {
+      background-image: radial-gradient(white, #bbdefb, #64b5f6, #2196f3);
+      opacity: 0%;
+      cursor: default;
+  }
+  25% {
+      opacity: 0%;
+      cursor: default;
+  }
+  70%{
+      top: 32.5vh;
+      opacity: 50%;
+      cursor: crosshair
+  }
+  100% {
+      background-image: radial-gradient(white, #bbdefb, #64b5f6, #2196f3);
+      top: 22.5vh;
+      opacity: 0%;
+      cursor: default;
+  }
+}
+
+@keyframes sundown {
+  0% {
+      background-image: radial-gradient(white, #bbdefb, #64b5f6, #2196f3);
+      opacity: 0%;
+      cursor: default;
+  }
+  25% {
+      opacity: 0%;
+      cursor: default;
+  }
+  70%{
+      top: 32.5vh;
+      opacity: 50%;
+      cursor: crosshair
+  }
+  100% {
+      background-image: radial-gradient(white, #bbdefb, #64b5f6, #2196f3);
+      top: 42.5vh;
       opacity: 0%;
       cursor: default;
   }
